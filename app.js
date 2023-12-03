@@ -78,6 +78,20 @@
     $(".pet-accessory").after(petElement);
   });
 
+  $(document).ready(function() {
+    // Hide all belongings with a class of 'secret'
+    $(".secret").hide('slow').delay(2000).show('slow');
+  
+    // Transmogrify your pet's leash into half cabbage
+    $(".pet-accessory.leash").addClass("cabbage");
+  
+    // In your main.css file, add the attribute color: CHARTREUSE; for all elements that have a class of cabbage
+  
+    // Fix your pet's leash by removing the class of cabbage
+    $(".pet-accessory.leash").removeClass("cabbage");
+  });
+  
+
 
 
   

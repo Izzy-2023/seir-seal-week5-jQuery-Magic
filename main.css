@@ -21,3 +21,7 @@ table, th, td {
     align-content: center;
     margin: 0 auto;
 }
+
+.cabbage {
+    color: chartreuse;
+}
