@@ -48,11 +48,38 @@
 //     // Select the element with ID container
 //     const $container = $("#container");
 //     // Create h5 element
-//     const $h5 = $("<h5>Hornbeam want with Dragon Heartstring</h5>");
+//     const $h5 = $("<h5>Hornbeam Wand with Dragon Heartstring</h5>");
 //     console.log($h5)
 //     // Append the h5 element to the container
 //     $container.append($h5);
 
 // })
+
+
+  $(document).ready(function() {
+    // Break your wand! (select the element that contains your wand and remove it)
+    $(".wand").remove();
+
+    // Class was hard! Drink all your butter beer! (remove just the butter beer from your list)
+    $("ul[storage='trunk'] li:contains('Butter beer')").remove();
+
+    // Get a new wand (add the same element back with new text describing your new wand. Be sure to insert it after your pet in the DOM)
+    var newWand = $("<h4>").addClass("wand").text("Elder Wand with Thestral Tail Hair Core");
+    $(".pet").after(newWand);
+
+    // Make your new wand stand out by adding a color of indigo (or any color you like)
+    $(".wand").css("color", "indigo");
+
+    // Send your pet on a spy mission (remove your pet from the DOM, put it somewhere else in your HTML)
+    var petElement = $(".cat").detach();
+    $(".pet-accessory").after(petElement);
+
+    // Have your pet come back (remove your pet from the DOM, put it back in its original location)
+    $(".pet-accessory").after(petElement);
+  });
+
+
+
+  
       
 
