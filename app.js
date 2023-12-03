@@ -92,6 +92,17 @@
   });
   
 
+  $(document).ready(function() {
+    // Update class schedule to 'Fall 2018'
+    $("h5").text("Fall 2018");
+
+    // Append 'Butter beer' as the first list item inside the unordered list
+    $("ul[storage='trunk']").prepend("<li>Butter beer</li>");
+
+    // Replace unordered list's property of 'trunk' with 'chest'
+    $("ul[storage='trunk']").attr("storage", "chest");
+  });
+
 
 
   
